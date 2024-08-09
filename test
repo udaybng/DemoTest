@@ -1,104 +1,202 @@
-What are the common HTTP methods used in API testing?
-What is the purpose of authentication in API testing?
-What are some common authentication methods used in API testing?
-What is the purpose of query parameters in API testing?
-How do you handle dynamic values in API testing, such as timestamps or random data?
-How do you manage cookies in REST Assured?
-What is the purpose of URL encoding in RESTful APIs?
-What are the differences between synchronous and asynchronous communication?
-How do you initiate request specification in REST Assured?
-What is a jsonPath in the context of REST Assured?
-"Want to fetch email value for id=2 from below sample payload, what would be the Json path?
-Sample Payload:
-""data"": [
-    {
-      ""id"": 1,
-      ""email"": ""george.bluth@reqres.in"",
-      ""first_name"": ""George"",
-      ""last_name"": ""Bluth"",
-      ""avatar"": ""https://reqres.in/img/faces/1-image.jpg""
-    },
-    {
-      ""id"": 2,
-      ""email"": ""janet.weaver@reqres.in"",
-      ""first_name"": ""Janet"",
-      ""last_name"": ""Weaver"",
-      ""avatar"": ""https://reqres.in/img/faces/2-image.jpg""
-    } ]"
-What does getStatusLine() method return?
-What does getStatusCode() method return?
-For Cookie Authentication, where we need to pass SessionID - in Query Param or Path Param?
-What's difference between Path Parameter and Query Parameter?
- What is serialization and deserialization?
-How do you use a REST Assured jsonPath to find all employee IDs between 15 and 300?
-How do you prioritize API test cases for regression testing?
-What is API virtualization, and why is it used in API testing?
-What are the benefits of using API virtualization in API testing?
-How do you measure the performance of APIs in your tests?
-Describe common HTTP Status codes/Response codes came across your API testing?
+Manual
+Manual
+Manual
+Manual
+Automation
+Automation
+Automation
+Automation
+Automation
+UI Automation
+UI Automation
+API Automation
+API Automation
+API Automation
+SOAPUI Automation
+SOAPUI Automation
+Service Virtualization
+Service Virtualization
+Automation Framework
+Automation Framework
+Automation Framework
+Automation Framework
+
+
+Agile methodology & ceremonies
+Types of testing: Smoke/Sanity/Regression
+STLC lifecycle
+Priority / Severity of bugs
+Assertions
+Exceptions and Handling exceptions
+Loggers
+Setup/Tear down
+Annotations in TestNG
+Implicit/ Explicit/Fluent
+Dropdown, Tables, iFrames, Windows
+Authentication Mechanism
+GET & POST method implementation
+Jsonpath, Serialization & De-Serialization
+Groovy Scripting
+Assertions and Validations in SOAPUI
+Using Parasoft Tool with Groovy
+Test Assets Deployment and Execution
+Cucumber Framework concepts(Files) - not aware
+Cucumber Framework concepts(Parameterization)
+Cucumber Framework concepts(Background/ Scenario outline)
+Framework design and Jenkins pipeline
 
 
 
-"Common HTTP methods used in API testing are:
-1.	GET: Used to retrieve data or resources from an API.
-2.	POST: Used to create new data or resources on an API.
-3.	PUT: Used to update existing data or resources on an API.
-4.	DELETE: Used to delete data or resources from an API.
-5.	PATCH: Used to update existing data or resources on an API partially."
-The purpose of authentication in API testing is to verify the identity of the requester before     granting access to protected resources.
-"Some common authentication methods used in API testing include: 
-   1.	Token-based authentication: This involves issuing a token to the client after successful authentication, which is then included in subsequent API requests for authorization.
-   2.	Basic authentication: This involves sending the username and password as part of the API request headers, encoded in base64 format.
-   3.	OAuth: This is a widely used authorization framework that allows for the delegation of access rights from one entity to another without sharing credentials."
-Query parameters in API testing are used to pass additional parameters in the URL of an API request. These parameters are used to customize the behavior of the API request, such as filtering, sorting, or paginating results.
-Dynamic values in API testing, such as timestamps or random data, can be handled by using techniques such as data-driven testing, parameterization, or test data management.
-Cookies in REST Assured can be managed using the “cookies()” method to retrieve or set cookies. To retrieve cookies from a response, use the “get cookies ()” method. The “cookie()” method with a cookie name and value can be set in requests. Cookies can be validated or manipulated as part of assertions or preconditions in test scripts.
-URL encoding ensures that special characters are correctly represented in URLs and prevents conflicts with reserved characters, such as “&” or “#.” Without encoding, certain characters may be misinterpreted or cause errors.URL encoding is essential for passing data in query parameters or path segments. Proper URL encoding ensures compatibility and reliability in RESTful API communication.
-"Below are the common differences between synchronous and asynchronous communication:
-•	Synchronous communication requires immediate responses.
-•	Asynchronous communication allows for delayed responses.
-•	Synchronous communication is blocked, while asynchronous communication is non-blocking.
-•	Asynchronous communication is suitable for long-running tasks.
-•	Synchronous communication is more straightforward but may lead to scalability issues.
-•	Asynchronous communication improves system responsiveness and resource utilization.
+SD
+
+"Sprint Planning
+Daily Standup
+Sprint Review
+Sprint Reterospective
+Backlog refinement"
+"Smoke test is done to make sure that the critical functionalities of the program are working fine, whereas sanity testing is done to check that newly added functionalities, bugs, etc., have been fixed.
+Regression: new build changesto software don't break existing functionality"
+"Req Analysis
+Test Planning
+Test Design
+Test Env Setup
+Test Execution
+Test Closure"
+"Severity --> refers to the degree of impact that a defect has on a product
+Priority--> is about the order in which issues should be resolved based on their impact on the system
 "
-"Here is the syntax:
-RequestSpecification reqSpec = RestAssured.given();
-reqSpec.baseUri(""http://localhost:8080"")
-reqSpec.basePath(""/employees"");"
+"AssertEquals
+AssertFalse
+AssertTrue
+AssertNotEqual
+Fail()"
+"NoSuchElementException
+ElementNotVisibleException
+NoSuchFrameException
+NoAlertPresentException
+NoSuchWindowException
+SessionNotFoundException
+StaleElementReferenceException
+InvalidSelectorException
+ElementNotSelectableException
+TimeOutException
+
+RequestSpecificationValidationException
+HttpResponseException"
+"Logger logger = Logger.getLogger(Demo3_log4jWithPropertiesXML.class);
+DOMConfigurator.configure(""log4j.xml"");
+logger.info(""user id entered"");
+	 "
+"System.setProperty(""""webdriver.chrome.driver"""", """"C:\\Users\\bhuvanagiri_kumar\\Documents\\Selenium\\ChromeDriver126\\chromedriver.exe"""");
+//launching chrome browser
+driver=new ChromeDriver();
+driver.manage().window().maximize();
+driver.get(""""http://10.82.180.36/Common/Login.aspx"""");
+
+Driver.quit()"
+"	• BeforeSuite
+	• BeforeTest
+	• BeforeClass
+	• BeforeMethod
+	• Test Case
+	• AfterMethod
+	• AfterClass
+	• AfterTest
+	• AfterSuite"
+"Implicit:  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+Explicit:Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    wait.until(d -> revealed.isDisplayed());
+FLUENT: Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)  
+	       .withTimeout(60, SECONDS) // this defines the total amount of  time to wait for  
+	       .pollingEvery(2, SECONDS) // this defines the polling frequency  
+	       .ignoring(NoSuchElementException.class); // this defines the exception to ignore   
+	 
+	fluentWait.until(
+        d -> {
+          revealed.sendKeys(""Displayed"");
+          return true;
+        });"
+
+Token Based, Basic Auth, Oauth
+"RESTASSURED.given(), when(), then()
+JsonObject:JSONObject data=new JSONObject();		data.put(""name"", ""uday"");
+.body(data.toString())
+.post(""url"")
+
+.get(""url"")
+
+
+POJO
+External:File f=new File(""./body.json"");		FileReader fr =new FileReader(f);
+JSONTokener jt=new JSONTokener(fr);		JSONObject data=new JSONObject(jt);
+.body(data.toString())"
+"process of changing an object's state into a byte stream. On the other hand, deserialization is the process of recreating the Java object in memory using the byte stream. This approach keeps the object alive.
+
 A JsonPath (io.restassured.path.json.JsonPath) is an easy way to get values from an Object document without resorting to XPath.
-data[1].email
-HTTP Protocol Version (HTTP/1.1), Status Code Integer Value (200) and Status Code String Value (Ok)
-Status Code Integer like 200, 201, 400, 401,404
-Query Param 
-"Path Parameter- used to identify a specific resource or resources.
-Query Parameter- used to sort/filter resources"
-Serialization is defined as the process of changing an object's state into a byte stream. On the other hand, deserialization is the process of recreating the Java object in memory using the byte stream. This approach keeps the object alive.
-"Response employeesResponse = RestAssured.given().request(Method.GET, ""/all"");
+Response employeesResponse = RestAssured.given().request(Method.GET, ""/all"");
 JsonPath jsonPathObj = employeesResponse.jsonPath();
 //get all employees id between 15 and 300
 List<Map> employees = jsonPathObj.get(""company.employee
-                .findAll { employee -> employee.id >= 15 && employee.id <= 300 }"");
-"
-Prioritizing API test cases for regression testing can be based on the criticality of APIs, impact on business functionalities, frequency of API usage, and feedback from stakeholders
-API virtualization is the process of simulating APIs for testing purposes. It is used in API testing to isolate dependencies, simulate responses, and ensure consistent behavior.
-The benefits of using API virtualization in API testing include reduced dependency on external systems, faster and isolated testing, and improved test repeatability.
-API performance testing is important to measure the response time, throughput, and resource utilization of APIs. It can be performed using tools like JMeter, LoadRunner, or Gatling.
-"Common HTTP Status Codes/Response codes and It’s description:
+                .findAll { employee -> employee.id >= 15 && employee.id <= 300 }"");"
+"//open txt file & Read first line
+context.fileReader=new BufferedReader(new FileReader(""C:\\Users\\bhuvanagiri_kumar\\OneDrive - Infosys Limited\\Documents\\Soap Files\\Data_Param.txt""));
+firstLine=context.fileReader.readLine();
+String[] value=firstLine.split("";"");
+testCase.testSteps[""Properties""].setPropertyValue(""val1"",value[0]);
+testCase.testSteps[""Properties""].setPropertyValue(""val2"",value[1]);
+log.info(""Uday"");
+nextLine=context.fileReader.readLine()
+if(nextLine!=null)
+{
+String[] next=nextLine.split("";"");
+testRunner.testCase.testSteps[""Properties""].setPropertyValue(""val1"",next[0])
+testRunner.testCase.testSteps[""Properties""].setPropertyValue(""val2"",next[1])
+testRunner.gotoStep(0)
+}
 
-1xx: Informational – Communicates transfer protocol-level information.
-2xx: Success – Indicates that the client’s request was accepted successfully.
-3xx: Redirection – Indicates that the client must take some additional action in order to complete their request.
-4xx: Client Error – This category of error status codes points the finger at clients.
-5xx: Server Error – The server takes responsibility for these error status codes.
- 
-400- The resource exists but input is wrong
-401- Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
-403- Forbidden response status code indicates that the server understands the request but refuses to authorize it.
-404- Represent resource not exist. i.e. the called API does not exist or Request Page does not exist.
- 
-200- It simply means that the request was received, understood, and is being processed, 
-201- Indicates that a request was successful, and a resource was created as a result.
 
-"
+//Assertion
+// check for RequestId element in response
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+
+assert holder[""//ns1:RequestId""] != null"
+"propertyContetnt:contains/not contains/xpath match
+status code & standards: invalidHTTPstatusCode, statusCode, notSoapFault,SchemaComplience,Soap Fault,Valid Status Codes, 
+Response SLA"
+capture the request xml parameters.. Using parameter query for certain data from DB and process the data and form response xml/json and return that response
+we will keep the assets in server and will use in API for execution
+
+"	FileInputStream fis=new FileInputStream(""C:\\Users\\bhuvanagiri_kumar\\Documents\\Selenium\\Excercise.xlsx"");
+	XSSFWorkbook wb=new XSSFWorkbook(fis);
+	XSSFSheet sheet=wb.getSheet(""Sheet2"");
+	
+	for(int i=sheet.getFirstRowNum()+1;i<=sheet.getLastRowNum();i++)
+	{
+		LoanType=sheet.getRow(i).getCell(0).getStringCellValue();
+		
+		sheet.getRow(i).createCell(4).setCellValue(MaxLoanAmount);
+	}
+	FileOutputStream fos=new FileOutputStream(""C:\\Users\\bhuvanagiri_kumar\\Documents\\Selenium\\Excercise.xlsx"");
+	wb.write(fos);
+	fos.close();
+	fis.close();"
+"	Background: User is Logged In
+	Given I navigate to the login page
+	When I submit username and password
+	Then I should be logged in 
+	Scenario: concatenations
+	    Given concatenate FirstName ""Uday"" and ""Kumar""
+	    When I do concatenation
+	    Then print concatenated file
+	
+	 Scenario Outline: Login to iebi portal
+	    Given initializing the chrome browser
+	    When login using ""<username>"" and ""<password>""
+	    Then close the application iebi portal
+	    
+	      Examples: 
+	      | username  | password |
+	      | donhere   | don@123  |
+	      | donhere2  | don@123  |
+	"
 
